@@ -17,7 +17,7 @@ export const timelineEvents: TimelineEvent[] = [
     endTime: "12:35",
     title: "Αλίκη Συνατσάκη",
     description: "Hostess",
-    location: "Main Stage",
+    location: "Main Stage - 2ος όροφος",
     type: "ceremony",
   },
   {
