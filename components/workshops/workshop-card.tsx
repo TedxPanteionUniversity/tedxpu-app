@@ -18,14 +18,6 @@ const titleStyle: CSSProperties = {
   lineHeight: 1,
 };
 
-const descriptionStyle: CSSProperties = {
-  color: "#a3a3a3",
-  fontSize: 28,
-  fontWeight: 200,
-  lineHeight: 1,
-  marginTop: 12,
-};
-
 const detailStyle: CSSProperties = {
   fontSize: 27,
   fontWeight: 500,
@@ -129,7 +121,7 @@ export function WorkshopCard({ workshop, index }: WorkshopCardProps) {
   return (
     <article className="relative">
       <div
-        className="relative overflow-visible bg-white px-5 py-8 shadow-none"
+        className="relative overflow-visible bg-white pb-8 pl-5 pr-2 pt-5 shadow-none"
         style={{
           ...getCardStyle(index),
           height: CARD_HEIGHT,
@@ -139,13 +131,10 @@ export function WorkshopCard({ workshop, index }: WorkshopCardProps) {
       >
         <HandDrawnFrame />
 
-        <div className="relative z-10 mt-0 max-w-full sm:mt-5">
+        <div className="relative z-10 -mr-3 mt-0 max-w-[calc(100%+12px)] sm:mt-3">
           <h2 className="text-black" style={titleStyle}>
             {workshop.title}
           </h2>
-          <p className="whitespace-nowrap" style={descriptionStyle}>
-            {workshop.description}
-          </p>
           <p className="whitespace-nowrap text-black" style={detailStyle}>
             -by {workshop.facilitator}
           </p>

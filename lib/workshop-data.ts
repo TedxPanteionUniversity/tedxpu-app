@@ -6,16 +6,16 @@ const workshopDetailsById: Record<
   Pick<Workshop, "description" | "facilitator" | "room" | "seatsLeft" | "registerHref">
 > = {
   "theater-workshop": {
-    description: "About the workshop",
-    facilitator: "TEDxPU Team",
-    room: "Workshop Area",
+    description: "",
+    facilitator: "Θεοδώρα Αγριτάκη",
+    room: "Όροφος: -2",
     seatsLeft: 0,
     registerHref: "https://docs.google.com/forms/d/e/1FAIpQLSf6hjhriTNK0SfPGBQkI7PKYb5oc47XUGW8SO_uQvLASVd-YQ/viewform?pli=1",
   },
   "wine-tasting-workshop": {
-    description: "About the workshop",
-    facilitator: "K.Theodorakakoy",
-    room: "Room A",
+    description: "",
+    facilitator: "Ευάγγελος Μπερής",
+    room: "Όροφος: 3ος",
     seatsLeft: 2,
     registerHref: "https://docs.google.com/forms/d/e/1FAIpQLSf7JB9ocr8OxlzT88oJL5bOMbk1cg-oaTGQiw91GyO1YDb1hA/viewform",
   },

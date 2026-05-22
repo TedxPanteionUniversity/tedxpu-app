@@ -312,8 +312,15 @@ export function EventTimeline() {
             const isLast = index === timelineEvents.length - 1;
             const isActive = activeEvent?.id === event.id;
             const speaker = getSpeakerForEvent(event);
-            const canExpand = Boolean(speaker?.bio);
+            const hasExpandableWorkshopDescription =
+              event.type === "workshop" && Boolean(event.description);
+            const canExpand = Boolean(speaker?.bio) || hasExpandableWorkshopDescription;
             const isExpanded = expandedEventId === event.id;
+            const toggleExpandedEvent = () =>
+              setExpandedEventId(isExpanded ? null : event.id);
+            const expandableLabel = hasExpandableWorkshopDescription
+              ? "details"
+              : "bio";
 
             return (
               <div
@@ -373,19 +380,33 @@ export function EventTimeline() {
 
                       {/* Title */}
                       <div className="mb-0.5 flex items-center gap-2">
-                        <h3
-                          className="min-w-0 text-lg font-black leading-tight"
-                          style={{ color: getEventTypeStyle(event.type).ink }}
-                        >
-                          {event.title}
-                        </h3>
+                        {canExpand ? (
+                          <button
+                            type="button"
+                            aria-expanded={isExpanded}
+                            aria-controls={`${event.id}-bio`}
+                            aria-label={`${isExpanded ? "Hide" : "Show"} ${expandableLabel} by clicking ${event.title}`}
+                            onClick={toggleExpandedEvent}
+                            className="min-w-0 text-left text-lg font-black leading-tight active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/20"
+                            style={{ color: getEventTypeStyle(event.type).ink }}
+                          >
+                            {event.title}
+                          </button>
+                        ) : (
+                          <h3
+                            className="min-w-0 text-lg font-black leading-tight"
+                            style={{ color: getEventTypeStyle(event.type).ink }}
+                          >
+                            {event.title}
+                          </h3>
+                        )}
                         {canExpand && (
                           <button
                             type="button"
                             aria-expanded={isExpanded}
                             aria-controls={`${event.id}-bio`}
-                            aria-label={`${isExpanded ? "Hide" : "Show"} bio for ${event.title}`}
-                            onClick={() => setExpandedEventId(isExpanded ? null : event.id)}
+                            aria-label={`${isExpanded ? "Hide" : "Show"} ${expandableLabel} for ${event.title}`}
+                            onClick={toggleExpandedEvent}
                             className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 bg-white shadow-sm transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/20"
                             style={{
                               borderColor: getEventTypeStyle(event.type).ink,
@@ -405,7 +426,7 @@ export function EventTimeline() {
                       </div>
 
                       {/* Description */}
-                      {event.description && (
+                      {event.description && !hasExpandableWorkshopDescription && (
                         <p className="mb-0.5 text-sm font-medium leading-snug text-black">
                           {event.description}
                         </p>
@@ -418,7 +439,18 @@ export function EventTimeline() {
                         </div>
                       )}
 
-                      {canExpand && isExpanded && speaker && (
+                      {hasExpandableWorkshopDescription && isExpanded && (
+                        <div
+                          id={`${event.id}-bio`}
+                          className="mt-3 border-t border-black/10 pt-3"
+                        >
+                          <p className="text-sm font-medium leading-snug text-black">
+                            {event.description}
+                          </p>
+                        </div>
+                      )}
+
+                      {speaker?.bio && isExpanded && (
                         <div
                           id={`${event.id}-bio`}
                           className="mt-3 border-t border-black/10 pt-3"

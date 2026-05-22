@@ -144,7 +144,7 @@ export function TeamSection() {
               </div>
 
               <div className="mx-auto mt-2 max-w-[88%] text-center text-[11px] leading-snug text-black">
-                <p className="font-medium italic">{group.name.toLowerCase()}</p>
+                <p className="font-medium italic">{group.name}</p>
                 <p className="mt-0.5">
                   {group.members.map((member, memberIndex) => (
                     <span
