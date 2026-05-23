@@ -8,14 +8,14 @@ const workshopDetailsById: Record<
   "theater-workshop": {
     description: "",
     facilitator: "Θεοδώρα Αγριτάκη",
-    room: "Όροφος: -2",
+    room: " Main Stage - Όροφος: 2ος",
     seatsLeft: 0,
     registerHref: "https://docs.google.com/forms/d/e/1FAIpQLSf6hjhriTNK0SfPGBQkI7PKYb5oc47XUGW8SO_uQvLASVd-YQ/viewform?pli=1",
   },
   "wine-tasting-workshop": {
     description: "",
     facilitator: "Ευάγγελος Μπερής",
-    room: "Όροφος: 3ος",
+    room: "Όροφος: -2",
     seatsLeft: 2,
     registerHref: "https://docs.google.com/forms/d/e/1FAIpQLSf7JB9ocr8OxlzT88oJL5bOMbk1cg-oaTGQiw91GyO1YDb1hA/viewform",
   },
