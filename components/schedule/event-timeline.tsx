@@ -12,6 +12,7 @@ const EVENT_DATE = {
   month: 5,
   day: 23,
 };
+const SCHEDULE_DELAY_NOTE = "+10";
 
 function parseTimeToMinutes(time: string) {
   const [hours, minutes] = time.split(":").map(Number);
@@ -311,6 +312,7 @@ export function EventTimeline() {
           {timelineEvents.map((event, index) => {
             const isLast = index === timelineEvents.length - 1;
             const isActive = activeEvent?.id === event.id;
+            const showDelayNote = index > 0;
             const speaker = getSpeakerForEvent(event);
             const hasExpandableWorkshopDescription =
               event.type === "workshop" && Boolean(event.description);
@@ -371,6 +373,11 @@ export function EventTimeline() {
                           {event.time}
                           {event.endTime && ` - ${event.endTime}`}
                         </span>
+                        {showDelayNote && (
+                          <span className="inline-flex items-center rounded-full bg-red-50 px-2 py-0.5 text-xs font-black leading-none text-red-600">
+                            {SCHEDULE_DELAY_NOTE}
+                          </span>
+                        )}
                         {isActive && (
                           <span className="-rotate-2 inline-flex items-center rounded-[48%_52%_44%_56%/58%_42%_55%_45%] border-2 border-red-600 bg-white px-2 py-0.5 text-[11px] font-black uppercase tracking-normal text-red-600">
                             Now
