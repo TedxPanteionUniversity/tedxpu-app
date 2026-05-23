@@ -12,7 +12,7 @@ export const timelineEvents: TimelineEvent[] = [
     type: "registration",
   },
   {
-    id: "session-host-aliki",
+    id: "session-host-aliki-1",
     time: "12:30",
     endTime: "12:35",
     title: "Αλίκη Συνατσάκη",
@@ -69,7 +69,7 @@ export const timelineEvents: TimelineEvent[] = [
     type: "talk",
   },
   {
-    id: "session-host-aliki",
+    id: "session-host-aliki-2",
     time: "13:54",
     endTime: "14:00",
     title: "Αλίκη Συνατσάκη",
@@ -95,7 +95,7 @@ export const timelineEvents: TimelineEvent[] = [
     type: "workshop",
   },
   {
-    id: "session-host-aliki",
+    id: "session-host-aliki-3",
     time: "15:20",
     endTime: "15:25",
     title: "Αλίκη Συνατσάκη",
@@ -136,7 +136,7 @@ export const timelineEvents: TimelineEvent[] = [
     type: "talk",
   },
   {
-    id: "session-host-aliki",
+    id: "session-host-aliki-4",
     time: "16:29",
     endTime: "16:35",
     title: "Αλίκη Συνατσάκη",
@@ -162,7 +162,7 @@ export const timelineEvents: TimelineEvent[] = [
     type: "workshop",
   },
   {
-    id: "session-host-aliki",
+    id: "session-host-aliki-5",
     time: "17:50",
     endTime: "17:55",
     title: "Αλίκη Συνατσάκη",
@@ -203,7 +203,7 @@ export const timelineEvents: TimelineEvent[] = [
     type: "performance",
   },
   {
-    id: "session-host-aliki",
+    id: "session-host-aliki-6",
     time: "18:59",
     endTime: "19:04",
     title: "Αλίκη Συνατσάκη",

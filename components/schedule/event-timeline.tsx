@@ -83,7 +83,7 @@ function getSpeakerForEvent(event: TimelineEvent) {
     return directMatch;
   }
 
-  if (event.title === "ΑΛΙΚΗ" && event.description === "Hostess") {
+  if (event.title === "Αλίκη Συνατσάκη" && event.description === "Hostess") {
     return speakersByEventId.get("session-host-aliki");
   }
 
