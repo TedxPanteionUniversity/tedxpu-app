@@ -12,7 +12,7 @@ const EVENT_DATE = {
   month: 5,
   day: 23,
 };
-const SCHEDULE_DELAY_NOTE = "+10";
+const SCHEDULE_DELAY_NOTE = "";
 
 function parseTimeToMinutes(time: string) {
   const [hours, minutes] = time.split(":").map(Number);
