@@ -1,31 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TEDx Panteion University — Sensorium
 
-## Getting Started
+This repository contains the mobile-first web app created for TEDxPanteionUniversity 2026 by Λιν Χονγκ Τσε (Κιτ) (Github: https://github.com/Kit432).
 
-First, install dependencies and run the development server with pnpm:
+The event theme was **Sensorium**. The app served as an event-day companion with:
+
+- An interactive Sensorium drawing game
+- The event schedule and live session indicator
+- Speaker and performance information
+- Workshop details and registration links
+- Event, team, and social information
+- A ticket-style venue and transportation screen
+
+## Archived status
+
+The 2026 Sensorium event has ended, and this project is now archived. The repository is retained as a record of the event and as a reference for future TEDx Panteion University teams.
+
+No active development or content updates are expected unless the project is reused for a future event.
+
+## Prerequisites
+
+- Node.js 20 or later
+- [pnpm](https://pnpm.io/)
+
+This project uses pnpm. Do not use npm or yarn, as the committed lockfile is `pnpm-lock.yaml`.
+
+## Local development
+
+Install dependencies:
 
 ```bash
 pnpm install
+```
+
+Start the development server:
+
+```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm dev
+pnpm lint
+pnpm build
+pnpm start
+```
 
-## Learn More
+- `pnpm dev` starts the local development server.
+- `pnpm lint` runs ESLint.
+- `pnpm build` creates a production build.
+- `pnpm start` serves the production build after `pnpm build`.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app is deployed on Vercel:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Production app: [https://tedxpu-app.vercel.app](https://tedxpu-app.vercel.app)
+- Vercel team: [https://vercel.com/tedxpanteiouniversity](https://vercel.com/tedxpanteiouniversity)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployments are managed through the TEDxPanteionUniversity Vercel account. Login through their Google account.
