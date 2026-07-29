@@ -1,6 +1,6 @@
-# TEDx Panteion University — Sensorium
+# TEDxPanteion University — Sensorium
 
-This repository contains the mobile-first web app created for TEDxPanteionUniversity 2026 by Λιν Χονγκ Τσε (Κιτ) (Github: https://github.com/Kit432).
+This repository contains the mobile-first web app created for TEDxPanteion University 2026 by Λιν Χονγκ Τσε (Κιτ) (Github: https://github.com/Kit432).
 
 The event theme was **Sensorium**. The app served as an event-day companion with:
 
@@ -13,7 +13,7 @@ The event theme was **Sensorium**. The app served as an event-day companion with
 
 ## Archived status
 
-The 2026 Sensorium event has ended, and this project is now archived. The repository is retained as a record of the event and as a reference for future TEDx Panteion University teams.
+The 2026 Sensorium event has ended, and this project is now archived. The repository is retained as a record of the event and as a reference for future TEDxPanteion University teams.
 
 No active development or content updates are expected unless the project is reused for a future event.
 
@@ -61,4 +61,4 @@ The app is deployed on Vercel:
 - Production app: [https://tedxpu-app.vercel.app](https://tedxpu-app.vercel.app)
 - Vercel team: [https://vercel.com/tedxpanteiouniversity](https://vercel.com/tedxpanteiouniversity)
 
-Deployments are managed through the TEDxPanteionUniversity Vercel account. Login through their Google account.
+Deployments are managed through the TEDxPanteion University Vercel account. Login through their Google account.
